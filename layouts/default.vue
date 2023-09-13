@@ -1,10 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="bg-white text-gray-700 dark:bg-zinc-900 dark:text-slate-200 absolute inset-0">
+  <div class="bg-neutral-300 text-gray-700 dark:bg-neutral-800 dark:text-slate-200 absolute inset-0">
     <Header/>
-    <slot />
-    <p>footer</p>
+    <slot/>
   </div>
 </template>
 

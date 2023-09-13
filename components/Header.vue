@@ -3,10 +3,18 @@
 </script>
 
 <template>
-  <div class="w-full flex justify-between items-center p-5 shadow-md ">
+  <div class="w-full flex justify-evenly items-center p-2 border-b border-neutral-400 dark:border-neutral-700 mb-10">
     <div class="flex">
-
-      <p class="font-extrabold text-[2rem]">IM-Overflow</p>
+      <p class="font-extrabold text-[25pxrem]">IM-Overflow</p>
+    </div>
+    <div class="flex w-max">
+      <FormKit
+          className="p-2 w-[400px] rounded-md bg-transparent border border-neutral-400 dark:border-neutral-700"
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Søk..."
+      />
     </div>
     <div class="flex gap-4">
       <button class="transition hover:border-b-[3px]">Log Inn</button>

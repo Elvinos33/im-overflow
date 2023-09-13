@@ -1,17 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: { enabled: true },
+    devtools: {enabled: true},
     modules: [
         '@nuxtjs/tailwindcss',
-        ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate']}],
+        ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}],
+        '@formkit/nuxt',
 
     ],
     imports: {
-        dirs:['store']
+        dirs: ['store']
     },
     app: {
         head: {
-            title:'IM-Overflow',
+            title: 'IM-Overflow',
         }
     }
 })
