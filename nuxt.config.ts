@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}],
         '@formkit/nuxt',
+        'nuxt-icon'
 
     ],
     imports: {
@@ -14,5 +15,5 @@ export default defineNuxtConfig({
         head: {
             title: 'IM-Overflow',
         }
-    }
+    },
 })

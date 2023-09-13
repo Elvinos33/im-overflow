@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <div class="w-full flex justify-evenly items-center p-2 border-b border-neutral-400 dark:border-neutral-700 mb-10">
+  <div
+      class="w-full flex sticky bg-neutral-300 dark:bg-neutral-800 z-10 top-0 justify-evenly items-center p-2 border-b border-neutral-400 dark:border-neutral-700 mb-10">
     <div class="flex">
       <p class="font-extrabold text-[25pxrem]">IM-Overflow</p>
     </div>
