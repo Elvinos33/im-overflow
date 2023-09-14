@@ -5,7 +5,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}],
         '@formkit/nuxt',
-        'nuxt-icon'
+        'nuxt-icon',
 
     ],
     imports: {

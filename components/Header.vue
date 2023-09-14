@@ -10,7 +10,7 @@
     </div>
     <div class="flex w-max">
       <FormKit
-          className="p-2 w-[400px] rounded-md bg-transparent border border-neutral-400 dark:border-neutral-700"
+          className="p-2 w-[400px] focus:outline-none focus:border-blue-400 rounded-md bg-transparent border border-neutral-400 dark:border-neutral-700"
           type="text"
           name="search"
           id="search"

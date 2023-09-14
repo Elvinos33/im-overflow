@@ -22,20 +22,17 @@ defineProps<{
         </div>
       </div>
       <div>
-        <div class="flex gap-2 p-2 items-center">
+        <button class="flex gap-2 p-2 items-center transition hover:brightness-110">
           <p>{{ comments }}</p>
-          <div class="flex flex-col items-center justify-center">
-            <button class="bg-neutral-300 dark:bg-neutral-800 rounded-md transition hover:brightness-110">
-              <Icon name="mdi:comment"/>
-            </button>
-          </div>
-        </div>
+          <Icon name="mdi:comment"/>
+        </button>
       </div>
     </div>
-    <button class="w-full flex flex-col items-start p-3 h-full brightness-90 transition hover:brightness-100">
+    <button
+        class="text-start w-full flex flex-col items-start p-3 h-full brightness-90 transition hover:brightness-100">
       <span class="font-bold text-[20px] mb-2">{{ title }}</span>
       <span class="py-1 px-2 text-slate-200 text-[12px] mb-2 bg-blue-600 rounded-full">JavaScript</span>
-      <span class="text-start text-[15px] line-clamp-4">{{ desc }}</span>
+      <span class="text-[15px] line-clamp-4">{{ desc }}</span>
     </button>
   </div>
 </template>
