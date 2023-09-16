@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import {edenTreaty} from "@elysiajs/eden";
+import {usePostsStore} from "~/store/posts";
 
 const app = edenTreaty<App>('http://localhost:8000')
+const postsState = usePostsStore()
 
 const {data: posts, postError} = await app.getPosts.get()
 const {data: tags, tagError} = await app.getTags.get()
 
+console.log(posts)
+postsState.addItem(posts)
+console.log(postsState.posts)
 
 </script>
 
