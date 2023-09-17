@@ -5,23 +5,36 @@ import {usePostsStore} from "~/store/posts";
 const app = edenTreaty<App>('http://localhost:8000')
 const postsState = usePostsStore()
 
-const {data: posts, postError} = await app.getPosts.get()
+const {data: postsFetch, postError} = await app.getPosts.get()
 const {data: tags, tagError} = await app.getTags.get()
 
-console.log(posts)
-postsState.addItem(posts)
-console.log(postsState.posts)
+postsState.posts = postsFetch
+const reactivePosts = computed(() => {
+  return filteredPosts.value.map((post: any) => {
+    return post;
+  });
+});
+
+const filteredPosts = computed(() => {
+  if (postsState.tags.length > 0) {
+    return postsState.getPostsWithTag(postsState.tags);
+  } else {
+    return postsState.posts
+  }
+});
+
 
 </script>
 
 <template>
+
   <main class="">
-    <div class="w-full flex flex-col items-center justify-center gap-20 h-max overflow-scroll">
-      <div class="flex gap-4 w-full justify-center">
+    <div class="flex flex-col items-center justify-center">
+      <div class="flex gap-2 justify-center">
         <tagsList :tags='tags'/>
         <div class="flex flex-col">
           <ul>
-            <li v-for="(post, index) in posts">
+            <li v-for="(post, index) in reactivePosts">
               <PostShort :post='post' :tags='tags'/>
             </li>
           </ul>
