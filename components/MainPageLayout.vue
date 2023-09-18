@@ -9,11 +9,6 @@ const {data: postsFetch, postError} = await app.getPosts.get()
 const {data: tags, tagError} = await app.getTags.get()
 
 postsState.posts = postsFetch
-const reactivePosts = computed(() => {
-  return filteredPosts.value.map((post: any) => {
-    return post;
-  });
-});
 
 const filteredPosts = computed(() => {
   if (postsState.tags.length > 0) {
