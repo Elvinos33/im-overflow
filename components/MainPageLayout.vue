@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import {edenTreaty} from "@elysiajs/eden";
 import {usePostsStore} from "~/store/posts";
+import {tags, postsFetch} from "~/backendData/data";
 
-const app = edenTreaty<App>('http://localhost:8000')
 const postsState = usePostsStore()
-
-const {data: postsFetch, postError} = await app.getPosts.get()
-const {data: tags, tagError} = await app.getTags.get()
-
 postsState.posts = postsFetch
 
 const filteredPosts = computed(() => {

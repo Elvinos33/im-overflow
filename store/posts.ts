@@ -31,6 +31,9 @@ export const usePostsStore = defineStore('posts', {
                     return tagIds.some((tagId) => post.tags.includes(tagId));
                 });
             };
+        },
+        getPostsWithId: (state) => (id: number) => {
+            return state.posts.find((post) => post.id === id);
         }
     }
 })

@@ -9,7 +9,6 @@ const getTagTitle = (tagId: number) => {
   const tag = props.tags.find((tag: { id: number; }) => tag.id === tagId);
   return tag ? tag.title : null
 }
-
 </script>
 
 <template>
@@ -42,7 +41,11 @@ const getTagTitle = (tagId: number) => {
           <span class="py-1 px-2 text-slate-200 text-[12px] mb-2 bg-blue-600 rounded-full">{{ getTagTitle(tag) }}</span>
         </li>
       </ul>
-      <span class="text-[15px] line-clamp-4">{{ post.content }}</span>
+      <span class="text-[15px]">{{ post.content }}</span>
     </NuxtLink>
   </div>
 </template>
+
+<style scoped>
+
+</style>
