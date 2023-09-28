@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     app: {
         head: {
             title: 'IM-Overflow',
-        }
+        },
+        pageTransition: { name: 'page', mode: 'out-in' }
     },
 })

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {usePostsStore} from "~/store/posts";
-import {postsFetch, tags} from "~/backendData/data";
+import {postsFetch, tags} from "~/backend/data";
 
 const route = useRoute()
 
@@ -10,7 +10,6 @@ postsState.posts = postsFetch
 const post = computed(() => {
   return postsState.getPostsWithId(Number(route.params.id))
 });
-console.log(post)
 </script>
 
 <template>

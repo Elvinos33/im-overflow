@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {usePostsStore} from "~/store/posts";
-import {tags, postsFetch} from "~/backendData/data";
+import {tags, postsFetch} from "~/backend/data";
 
 const postsState = usePostsStore()
 postsState.posts = postsFetch
